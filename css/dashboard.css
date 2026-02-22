@@ -19,16 +19,16 @@ body{
 }
 
 
-/* Sous-menu imbriqué */
+
 .submenu .nested {
-    display: none; /* caché par défaut */
+    display: none; 
     flex-direction: column;
     background: rgba(0,0,0,0.1);
-    border-left: 2px solid #242484; /* pour visualiser la hiérarchie */
+    border-left: 2px solid #242484; 
     margin-top: 5px;
 }
 
-/* Style des liens du sous-menu imbriqué */
+
 .submenu .nested a {
     padding-left: 20px;
     padding-top: 8px;
@@ -45,10 +45,10 @@ body{
     background: rgba(36,36,132,0.2);
 }
 
-/* Le parent Insertion */
+
 .submenu-parent a.has-submenu {
     display: block;
-    padding-left: 40px; /* alignement avec les autres liens */
+    padding-left: 40px; 
     color: #242484;
     text-decoration: none;
     border-radius: 5px;
@@ -61,7 +61,7 @@ body{
 .logo{
   max-width: 100;
   display: flex;
-  align-items: center; /* aligne verticalement */
+  align-items: center; 
   gap:40px;
 }
 
@@ -111,7 +111,7 @@ body{
 }
 
 
-/* MAIN */
+
 .main{flex:1;display:flex;flex-direction:column}
 
 /* TOPBAR */

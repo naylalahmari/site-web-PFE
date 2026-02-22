@@ -11,7 +11,7 @@ body {
   background: #f4f6f9;
 }
 
-/* Titre */
+
 h2 {
   text-align: center;
   color: #242484;
@@ -19,7 +19,7 @@ h2 {
   font-weight: 600;
 }
 
-/* Container tableau */
+
 .table-container {
   background: #ffffff;
   padding: 30px;
@@ -29,13 +29,13 @@ h2 {
   margin: 40px auto;
 }
 
-/* Table */
+
 table {
   width: 100%;
   border-collapse: collapse;
 }
 
-/* En-tête admin */
+
 th {
   padding: 14px 18px;
   font-size: 13px;
@@ -48,7 +48,7 @@ th {
   text-align: left;
 }
 
-/* Cellules */
+
 td {
   padding: 14px 18px;
   font-size: 14px;
@@ -56,24 +56,24 @@ td {
   border-bottom: 1px solid #eee;
 }
 
-/* Centrer Email (3ème colonne) */
+
 th:nth-child(3),
 td:nth-child(3) {
   text-align: center;
 }
 
-/* Centrer Actions (8ème colonne) */
+
 th:nth-child(8),
 td:nth-child(8) {
   text-align: center;
 }
 
-/* Empêcher retour à la ligne dans Actions */
+
 td:nth-child(8) {
   white-space: nowrap;
 }
 
-/* Hover ligne */
+
 tbody tr {
   transition: 0.2s ease;
 }
@@ -82,7 +82,7 @@ tbody tr:hover {
   background-color: #f8f9ff;
 }
 
-/* Bouton Modifier */
+
 .edit-btn {
   background-color: #242484;
   color: white;
@@ -98,7 +98,7 @@ tbody tr:hover {
   background-color: #1a1a5e;
 }
 
-/* Bouton Supprimer */
+
 .delete-btn {
   background-color: transparent;
   color: #c0392b;
