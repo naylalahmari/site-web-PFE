@@ -1,0 +1,193 @@
+*{
+  margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif
+}
+body{
+  display:flex;min-height:100vh;background:#f4f6f9
+}
+
+/* SIDEBAR */
+.sidebar{
+  width:250px;
+  background: #ffffff;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 11%, rgba(224, 221, 7, 1) 100%);
+  color:#242484;
+  display:flex;
+  flex-direction:column;
+  transition:0.3s;
+  position: relative;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1)
+}
+
+
+/* Sous-menu imbriqué */
+.submenu .nested {
+    display: none; /* caché par défaut */
+    flex-direction: column;
+    background: rgba(0,0,0,0.1);
+    border-left: 2px solid #242484; /* pour visualiser la hiérarchie */
+    margin-top: 5px;
+}
+
+/* Style des liens du sous-menu imbriqué */
+.submenu .nested a {
+    padding-left: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 13px;
+    color: #242484;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.submenu .nested a:hover {
+    background: rgba(36,36,132,0.2);
+}
+
+/* Le parent Insertion */
+.submenu-parent a.has-submenu {
+    display: block;
+    padding-left: 40px; /* alignement avec les autres liens */
+    color: #242484;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.submenu-parent a.has-submenu:hover {
+    background: rgba(36,36,132,0.1);
+}
+.logo{
+  max-width: 100;
+  display: flex;
+  align-items: center; /* aligne verticalement */
+  gap:40px;
+}
+
+
+.sidebar.collapsed{width:80px}
+.sidebar .brand{
+  padding:20px;
+  font-size:18px;
+  font-weight:bold;
+  text-align:center;
+  border-bottom:1px solid rgba(255,255,255,0.2)
+}
+.sidebar a{
+  color:#242484;
+  text-decoration:none;
+  padding:12px 20px;
+  display:block;
+  font-size:14px;
+  transition:0.2s
+}
+.sidebar a:hover{background:rgba(255,255,255,0.1)}
+
+.sidebar .submenu{
+  display:none;
+  flex-direction:column;
+  background:rgba(0,0,0,0.15)
+}
+.sidebar .submenu a{
+  padding-left:40px;
+  font-size:13px
+}
+
+.sidebar button{
+  margin:20px;
+  padding:8px;
+  border:none;
+  border-radius:20px;
+  cursor:pointer
+}
+.sidebar-toggle {
+  position: absolute !important;
+  bottom: 20px !important;
+  left: 40% !important;
+  transform: translateX(-50%) !important;
+  background-color:#242484 !important;
+  color: white !important;
+}
+
+
+/* MAIN */
+.main{flex:1;display:flex;flex-direction:column}
+
+/* TOPBAR */
+.topbar{
+  height:40px;
+  background:white;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 20px;
+  
+}
+
+
+
+
+.top-icons{
+  display:flex;
+  align-items:center;
+  margin-left: auto;
+  gap:25px;
+  position:relative
+}
+.icon,.profile{position:relative;cursor:pointer}
+.badge{
+  position:absolute;
+  top:-5px;
+  right:-10px;
+  background:red;
+  color:white;
+  font-size:10px;
+  padding:2px 6px;
+  border-radius:10px
+}
+
+.dropdown{
+  position:absolute;
+  top:45px;
+  right:0;
+  background:white;
+  width:280px;
+  border-radius:6px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.15);
+  display:none;
+  flex-direction:column;
+  z-index:100
+}
+.dropdown h4{
+  background:#4e73df;
+  color:white;
+  padding:10px;
+  font-size:14px
+}
+.dropdown a{
+  padding:10px;
+  text-decoration:none;
+  color:#333;
+  font-size:13px;
+  border-bottom:1px solid #eee
+}
+.dropdown a:hover{background:#f1f1f1}
+
+.profile{
+  display:flex;
+  align-items:center;
+  gap:10px
+}
+.profile img{
+  width:35px;
+  height:35px;
+  border-radius:50%
+}
+
+.content{
+  padding:30px;
+  display: flex;
+  justify-content: center;
+
+}

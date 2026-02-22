@@ -1,0 +1,70 @@
+/* FORMULAIRE ADMIN - 2 CHAMPS PAR LIGNE */
+.form-container {
+    background: white;
+    padding: 30px 40px;
+    width: 90%;           /* presque toute la largeur */
+    max-width: 1000px;
+    margin: 30px auto;    /* centré */
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #242484;
+    font-size: 20px;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+/* FORMULAIRE 2 COLONNES */
+.two-column-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 champs par ligne */
+    gap: 20px;                             /* espace entre les champs */
+}
+
+/* INPUT GROUP */
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #242484;
+    font-size: 14px;
+}
+
+.input-group input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #242484;
+}
+
+/* Bouton centré sous le formulaire */
+button[type="submit"] {
+    grid-column: 1 / -1; /* occupe toutes les colonnes de la grille */
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #242484;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 20px 0 0 0; /* espace au-dessus */
+}
+
+button[type="submit"]:hover {
+    background-color: #333;
+}
