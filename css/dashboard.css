@@ -7,26 +7,26 @@
 
 body{
   background:#f4f6f9;
-  overflow-x: hidden; /* empêche le scroll horizontal */
+  overflow-x: hidden; 
 }
 
-/*Topbar*/ 
+
 .topbar{
   position: sticky;
-  top: 0; /* reste collée en haut */
-  z-index: 999; /* pour qu’elle reste au-dessus des autres éléments */
+  top: 0; 
+  z-index: 999; 
   padding-left: 0;
   padding-right: 20px;
   display:flex; 
   align-items:center; 
   justify-content:space-between; 
-  flex-wrap: wrap; /* permet au contenu de passer à la ligne si trop large */
+  flex-wrap: wrap; 
   background:#21216c; 
   height:55px; 
   box-shadow: 0 4px 12px rgba(0,0,0,0.25), 0 2px 6px rgba(0,0,0,0.15); 
 }
 
-/* Logo */
+
 .logo{
   display:flex;
   align-items:center;
@@ -42,12 +42,12 @@ body{
   width:auto;
 }
 
-/* MENU */
+
 .menu{
   list-style:none;
   display:flex;
   gap:30px;
-  flex-wrap: wrap; /* empêche le scroll horizontal, le menu passe à la ligne si besoin */
+  flex-wrap: wrap; 
 }
 
 .menu li{
@@ -64,10 +64,10 @@ body{
 }
 
 .menu > li > a:hover{
-  color:#ffdd57; /* survol accentué */
+  color:#ffdd57; 
 }
 
-/* SUBMENU */
+
 .submenu{
   list-style:none;
   position:absolute;
@@ -106,7 +106,7 @@ body{
   border-radius:5px;
 }
 
-/* NESTED SUBMENU */
+
 .nested-submenu{
   list-style:none;
   position:absolute;
@@ -145,7 +145,7 @@ body{
   border-radius:5px;
 }
 
-/* PROFILE */
+
 .profile{
   display:flex;
   align-items:center;
@@ -201,7 +201,7 @@ body{
   border-radius:5px;
 }
 
-/* CONTENT */
+
 .content{
   padding:40px;
 }

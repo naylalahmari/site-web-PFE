@@ -1,10 +1,9 @@
-/* Container général du formulaire */
 .form-container {
   background: white;
   padding: 40px;
-  width: 70%;           /* moins large que 90% */
-  max-width: 800px;     /* limite sur grands écrans */
-  margin: 40px auto;    /* centré horizontalement */
+  width: 70%;          
+  max-width: 800px;     
+  margin: 40px auto;    
   border-radius: 16px;
   box-shadow: 0 15px 35px rgba(0,0,0,0.08);
   border-top: 4px solid #21216c;
@@ -13,7 +12,7 @@
   box-sizing: border-box;
 }
 
-/* Header */
+
 .form-header h2 {
   color: #21216c;
   font-size: 22px;
@@ -27,14 +26,14 @@
   margin-bottom: 25px;
 }
 
-/* Formulaire en colonne unique */
+
 .two-column-form {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
 
-/* Chaque champ sur une ligne */
+
 .two-column-form .input-group {
   flex: 1 1 100%;
   display: flex;
@@ -43,7 +42,7 @@
   min-width: 250px;
 }
 
-/* Label */
+
 .input-group label {
   margin-bottom: 6px;
   font-weight: 500;
@@ -73,21 +72,21 @@
   box-sizing: border-box;
 }
 
-/* Champ number spécifique pour Exercice */
+
 .input-group input[type="number"] {
   -moz-appearance: textfield;
   appearance: textfield;
   max-width: 100%;
 }
 
-/* Focus */
+
 .input-group input:focus,
 .input-group select:focus {
   border-color: #21216c;
   box-shadow: 0 0 0 3px rgba(33,33,108,0.15);
 }
 
-/* Bouton et actions */
+
 .form-actions {
   flex: 1 1 100%;
   display: flex;
@@ -112,7 +111,7 @@ button[type="submit"]:hover {
   transform: translateY(-1px);
 }
 
-/* Responsive pour mobile */
+
 @media (max-width: 900px) {
   .two-column-form .input-group {
     flex: 1 1 100%;

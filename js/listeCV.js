@@ -49,7 +49,7 @@ function afficherEmployes() {
 }
 
 
-// ✅ ACTIVER ÉDITION (MODIFIÉ SEULEMENT ICI)
+//  ACTIVER ÉDITION 
 function activerEdition(row, emp) {
     const tds = row.querySelectorAll("td");
 
@@ -114,7 +114,7 @@ function activerEdition(row, emp) {
 }
 
 
-// ✅ ENREGISTRER (MODIFIÉ POUR INPUT + SELECT)
+// ENREGISTRER 
 function enregistrerModifications() {
     if (!editRow || !editEmp) return;
     const tds = editRow.querySelectorAll("td");
