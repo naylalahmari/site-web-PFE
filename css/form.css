@@ -1,70 +1,124 @@
-
+/* Container général du formulaire */
 .form-container {
-    background: white;
-    padding: 30px 40px;
-    width: 90%;           
-    max-width: 1000px;
-    margin: 30px auto;    
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  background: white;
+  padding: 40px;
+  width: 70%;           /* moins large que 90% */
+  max-width: 800px;     /* limite sur grands écrans */
+  margin: 40px auto;    /* centré horizontalement */
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  border-top: 4px solid #21216c;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', sans-serif;
+  box-sizing: border-box;
 }
 
-.form-container h2 {
-    text-align: center;
-    color: #242484;
-    font-size: 20px;
-    margin-bottom: 25px;
-    font-weight: 500;
+/* Header */
+.form-header h2 {
+  color: #21216c;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 6px;
 }
 
+.form-header p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
 
+/* Formulaire en colonne unique */
 .two-column-form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 20px;                             
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-
-.input-group {
-    display: flex;
-    flex-direction: column;
+/* Chaque champ sur une ligne */
+.two-column-form .input-group {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-width: 250px;
 }
 
+/* Label */
 .input-group label {
-    font-weight: 600;
-    margin-bottom: 6px;
-    color: #242484;
-    font-size: 14px;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #21216c;
+  font-size: 14px;
 }
 
-.input-group input {
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    outline: none;
-    font-size: 14px;
-    transition: 0.3s;
+/* Etoile champs obligatoires */
+.input-group label.required::after {
+  content: "*";
+  color: #ff4d4f;
+  margin-left: 4px;
 }
 
-.input-group input:focus {
-    border-color: #242484;
+/* Champs input et select */
+.input-group input,
+.input-group select {
+  padding: 12px 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+  width: 100%;
+  max-width: 100%;
+  min-height: 42px;
+  box-sizing: border-box;
 }
 
+/* Champ number spécifique pour Exercice */
+.input-group input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  max-width: 100%;
+}
+
+/* Focus */
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #21216c;
+  box-shadow: 0 0 0 3px rgba(33,33,108,0.15);
+}
+
+/* Bouton et actions */
+.form-actions {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 30px;
+}
 
 button[type="submit"] {
-    grid-column: 1 / -1;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background-color: #242484;
-    color: white;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: 0.3s;
-    margin: 20px 0 0 0; 
+  background-color: #21216c;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 button[type="submit"]:hover {
-    background-color: #333;
+  background-color: #3331a5;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: translateY(-1px);
+}
+
+/* Responsive pour mobile */
+@media (max-width: 900px) {
+  .two-column-form .input-group {
+    flex: 1 1 100%;
+  }
+
+  .form-actions {
+    justify-content: center;
+  }
 }

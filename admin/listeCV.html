@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard</title>
-<link rel="stylesheet" href="css/dashboard.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liste des inscriptions CV</title>
+  <link rel="stylesheet" href="../css/list.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
 </head>
 <body>
-  <header>
+
+   <header>
     <div class="topbar">
 
         <!--logo-->
         <div class="logo">
-          <img src="src/logo/logo.png" alt="logo" height="45">
+          <img src="../src/logo/logo.png" alt="logo" height="45">
           <span>Admin</span>
         </div>
         
         <!--menu-->
       <nav>
          <ul class="menu">
-                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="../index.html">Dashboard</a></li>
 
                 <li class="dropdown">
                     <a href="#">Tirage au sort</a>
@@ -38,14 +40,14 @@
                 <li class="dropdown">
                     <a href="#">Centre de vacances</a>
                     <ul class="submenu">
-                        <li><a href="admin/listeCV.html">Liste</a></li>
+                        <li><a href="listeCV.html">Liste</a></li>
                         <li class="nested-dropdown">
                             <a href="#">Insertion ▸</a>
                             <ul class="nested-submenu">
-                              <li><a href="admin/insertCVSh.html">Structure d'hébergement</a></li>
-                              <li><a href="admin/insertCVFh.html">Formule d'hébergement</a></li>
-                              <li><a href="admin/insertCVQ.html">Quotas</a></li>
-                              <li><a href="admin/insertCVS.html">Session</a></li>
+                              <li><a href="insertCVSh.html">Structure d'hébergement</a></li>
+                              <li><a href="insertCVFh.html">Formule d'hébergement</a></li>
+                              <li><a href="insertCVQ.html">Quotas</a></li>
+                              <li><a href="insertCVS.html">Session</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -84,7 +86,7 @@
         <!--profil-->
         <div class="profile">
             <span>Bienvenue</span>
-            <img src="src/img/profil white rm.png" alt="profile">
+            <img src="../src/img/profil white rm.png" alt="profile">
             <ul class="profile-menu">
                 <li><a href="#">Déconnexion</a></li>
             </ul>
@@ -92,9 +94,61 @@
 
     </div>
 </header>
+  
 
+  <div class="table-container">
 
+    <div class="table-header">
+        <h2>Liste des employés participants au Centre de vacances</h2>
+        <p>Consultation et gestion des inscriptions</p>
+    </div>
 
+    <table id="listeTable">
+        <thead>
+            <tr>
+                <th>Matricule</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Statut</th>
+                <th>Fonction</th>
+                <th>Structure</th>
+                <th>Type</th>
+                <th>Date de naissance</th>
+                <th>Actions</th>
+            </tr>
+            
+        </thead>
+        <tbody>
+           
+        </tbody>
+    </table>
 
+</div>
+
+<div id="confirmModal" class="modal">
+  <div class="modal-content">
+    <p>Voulez-vous vraiment supprimer cet employé ?</p>
+    <button id="confirmYes">Oui</button>
+    <button id="confirmNo">Non</button>
+  </div>
+</div>
+
+<div id="confirmEditModal" class="modal">
+  <div class="modal-content">
+    <p>Voulez-vous vraiment enregistrer les modifications ?</p>
+    <button id="confirmEditYes">Oui</button>
+    <button id="confirmEditNo">Non</button>
+  </div>
+</div> 
+
+<div id="confirmModal" class="modal">
+  <div class="modal-content">
+    <p>Voulez-vous vraiment supprimer cet employé ?</p>
+    <button id="confirmYes">Oui</button>
+    <button id="confirmNo">Non</button>
+  </div>
+</div>
+
+<script src="../js/listeCV.js"></script>
 </body>
 </html>
