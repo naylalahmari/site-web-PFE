@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insertion de session</title>
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/form.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header> 
+    <div class="topbar">
+      <!-- logo -->
+      <div class="logo">
+        <img src="../src/logo/logo.png" alt="logo" height="45">
+      </div>
+
+      <!-- menu -->
+      <nav>
+        <ul class="menu">
+          <li><a href="inscriptionCV.html">Inscription Centre de vacances</a></li>
+          <li><a href="inscriptionVE.html">Inscription Voyage à l'étranger</a></li>
+          <li><a href="inscriptionOM.html">Inscription Omra</a></li>
+        </ul>
+      </nav>
+
+      <!-- profile -->
+      <div class="profile">
+        <span>Bienvenue</span>
+        <img src="../src/img/profil white rm.png" alt="profile">
+        <ul class="profile-menu">
+          <li><a href="#">Déconnexion</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <button class="menu-hb"><i class="fa-solid fa-bars"></i></button>
+    <ul>
+      <li class="active"><i class="fa-solid fa-house"></i> 
+        <a href="../index.html"><span>Accueil</span></a>
+      </li>
+
+      <li class="dropdown">
+        <a href="#"><i class="fa-solid fa-umbrella-beach"></i> <span>Centre de vacances ▸</span></a>
+        <ul class="submenu">
+          <li><a href="listeCV.html">Liste</a></li>
+          <li class="nested-dropdown">
+            <a href="#">Insertion ▸</a>
+            <ul class="nested-submenu">
+              <li><a href="insertCVSh.html">Structure d'hébergement</a></li>
+              <li><a href="insertCVFh.html">Formule d'hébergement</a></li>
+              <li><a href="insertCVQ.html">Quotas</a></li>
+              <li><a href="insertCVS.html">Session</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#"><i class="fa-solid fa-plane"></i> <span>Voyage à l'étranger ▸</span></a>
+        <ul class="submenu">
+          <li><a href="listeVE.html">Liste</a></li>
+          <li class="nested-dropdown">
+            <a href="#">Insertion ▸</a>
+            <ul class="nested-submenu">
+              <li><a href="insertVEQ.html">Quotas</a></li>
+              <li><a href="insertVES.html">Session</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#"><i class="fa-solid fa-kaaba"></i> <span>Omra ▸</span></a>
+        <ul class="submenu">
+          <li><a href="listeOM.html">Liste</a></li>
+          <li class="nested-dropdown">
+            <a href="#">Insertion ▸</a>
+            <ul class="nested-submenu">
+              <li><a href="insertOMQ.html">Quotas</a></li>
+              <li><a href="insertOMS.html">Session</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <hr>
+      <li class="dropdown">
+        <a href="#"><i class="fa-solid fa-shuffle"></i> <span>Tirage au sort ▸</span></a>
+        <ul class="submenu">
+          <li><a href="#">Lancer le tirage</a></li>
+          <li class="nested-dropdown">
+            <a href="#">Liste ▸</a>
+            <ul class="nested-submenu">
+              <li><a href="#">Historique</a></li>
+              <li><a href="#">Désistements</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+
+
+  <div class="dashboard">
+    <main class="main-content">
+      <div class="form-container">
+
+        <div class="form-header">
+            <h2>Nouvelle session</h2>
+            <p>Remplissez les informations de la nouvelle session.</p>
+        </div>
+
+        <form id="addForm" class="two-column-form">
+
+          <div class="input-group">
+            <label for="" class="required">
+              Nom de la structure d'hébergement
+            </label>
+            <select name="StructHeberg" id="" required>
+              <option value="" selected hidden disabled>
+                Veuillez sélectionner une structure
+              </option>
+              <option value=""></option>
+              <option value=""></option>
+            </select>
+          </div>
+
+            
+          <div class="input-group">
+            <label for="">
+              Formule d'hébergement
+            </label>
+            <select name="Formule_Hebergement" id="" required>
+              <option value="" selected hidden disabled>
+                Veuillez sélectionner une formule
+              </option>
+              <option value="">All Inclusive</option>
+              <option value="">Demi-pension</option>
+              <option value="">Chambre et petit-déjeuner</option>
+              <option value="">Hébergement seul</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="" class="required">
+              Quotas
+            </label>
+            <select name="Quota_CV" id="" required>
+              <option value="" selected hidden disabled>
+                Veuillez sélectionner un quota
+              </option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label>Date début</label>
+            <input type="date" required>
+          </div>
+
+          <div class="input-group">
+            <label>Date fin</label>
+            <input type="date" required>
+          </div>
+
+          <div class="input-group">
+            <label>Exercice</label>
+            <input type="number" placeholder="Ex: 2026" required>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit">Enregistrer</button>
+          </div>
+
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/dashboard.js"></script>
+  <script src="../js/form.js"></script>
+</body>
+</html>
